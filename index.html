@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Test Regex Phone</title>
+	</head>
+	<body>
+		<header id="header">
+			<h1>Regex Phone JS</h1>
+		</header>
+		<section id="main">
+			<input id="phone" type="tel" autofocus placeholder="Phone number">
+			<input id="mybtn" type="submit" value="Submit" onclick="Validate()">
+		</section>
+		<footer id="info">
+			<p>
+				Written by <a href="mailto:pnovales@gmail.com">Pedro E Novales</a>
+			</p>
+		</footer>
+		<script type="text/javascript">
+			function Validate() {
+				var phone = document.getElementById("phone").value;
+				var pattern = /^(\+?1[-. ]?)?\(?\d{3}\)?[-. ]?\d{3}[-. ]?\d{4}$/;
+				//valid values with contry code or not.
+
+				if(pattern.test(phone))
+					alert("Valid value at US :) !!! " + phone);
+				else {
+					alert("Invalid value at US :(");
+				}
+
+			}
+		</script>
+	</body>
+</html>
